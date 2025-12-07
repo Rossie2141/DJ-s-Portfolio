@@ -28,7 +28,7 @@ export default function ProfileSection() {
           <div>
             <h2 className="text-4xl font-bold mb-6" data-testid="profile-title"></h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed" data-testid="profile-description-1">
-  Hi, I'm Shriprasad, a passionate data scientist and recent graduate from UMass Dartmouth with expertise in Python, R, and machine learning frameworks. 
+  Hi, I'm Shriprasad, a passionate data scientist and  graduate student at UMass Dartmouth with expertise in Python, R, and machine learning frameworks. 
   I specialize in transforming complex datasets into meaningful insights that drive business decisions, and I also bring experience as a full stack developer.
 </p>
 <p className="text-lg text-muted-foreground mb-6 leading-relaxed" data-testid="profile-description-2">
