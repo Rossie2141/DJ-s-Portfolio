@@ -51,7 +51,7 @@ export default function EducationSection() {
                     </div>
                     
                     <div>
-                      <h4 className="text-lg font-semibold mb-2 text-primary">Achievements</h4>
+                      {/* <h4 className="text-lg font-semibold mb-2 text-primary">Achievements</h4>
                       <ul className="space-y-2" data-testid="education-achievements-masters">
                         <li className="flex items-start">
                           <Trophy className="text-primary mr-3 mt-1" size={16} />
@@ -65,7 +65,7 @@ export default function EducationSection() {
                           <Star className="text-primary mr-3 mt-1" size={16} />
                           <span>Outstanding Graduate Project Award (Predictive Analytics)</span>
                         </li>
-                      </ul>
+                      </ul> */}
                     </div>
                   </div>
                 </div>

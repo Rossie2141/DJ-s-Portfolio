@@ -73,12 +73,12 @@ export default function ContactSection() {
                   </div>
                 </div>
                 
-                {/* <div className="flex items-start" data-testid="contact-github">
+                <div className="flex items-start" data-testid="contact-github">
                   <Github className="text-2xl text-primary mr-4 mt-1" size={24} />
                   <div>
                     <h4 className="font-semibold mb-1">GitHub</h4>
                     <a 
-                      href="https://github.com/dataforge-umass" 
+                      href="https://github.com/Rossie2141?tab=repositories" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
@@ -86,7 +86,7 @@ export default function ContactSection() {
                       github.com/dataforge-umass
                     </a>
                   </div>
-                </div> */}
+                </div>
                 
                 <div className="flex items-start" data-testid="contact-location">
                   <MapPin className="text-2xl text-primary mr-4 mt-1" size={24} />
