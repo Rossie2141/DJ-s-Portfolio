@@ -83,7 +83,7 @@ export default function ContactSection() {
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      github.com/dataforge-umass
+                      github.com/Rossie2141
                     </a>
                   </div>
                 </div>
