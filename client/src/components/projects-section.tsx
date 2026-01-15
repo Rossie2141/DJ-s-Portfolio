@@ -12,7 +12,7 @@ const projects = [
   },
    {
     id: 2,
-    title: "Food Restaurant App",
+    title: "Food Ordering Application",
     description: "Full-featured restaurant app with user authentication, interactive menu, shopping cart with tax calculation, and item favorites with modern React UI design",
     image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.8,
@@ -26,7 +26,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.7,
     tech: "TensorFlow, CNN, Python",
-    // liveLink: "https://example.com/image-classifier"
+    liveLink: "https://github.com/Rossie2141/Skin-Disease"
   },
   {
     id: 4,
