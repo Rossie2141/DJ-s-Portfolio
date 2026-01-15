@@ -10,14 +10,14 @@ const projects = [
     tech: "React, Vercel, RAG, NLP",
     liveLink: "https://ragbot-ashy.vercel.app"
   },
-  {
+   {
     id: 2,
-    title: "Sales Forecasting Dashboard",
-    description: "Interactive dashboard for real-time sales prediction and trend analysis",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    title: "Food Restaurant App",
+    description: "Full-featured restaurant app with user authentication, interactive menu, shopping cart with tax calculation, and item favorites with modern React UI design",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.8,
-    tech: "R, Shiny, Time Series",
-    // liveLink: "https://example.com/sales-dashboard"
+    tech: "React.js, State Management, UI/UX",
+    liveLink: "https://foodi-res-app.vercel.app/"
   },
   {
     id: 3,
