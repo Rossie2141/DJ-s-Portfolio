@@ -53,17 +53,17 @@ export default function EducationSection() {
                     <div>
                       <h4 className="text-lg font-semibold mb-2 text-primary">Achievements</h4>
                       <ul className="space-y-2" data-testid="education-achievements-masters">
-                        <li className="flex items-start">
+                        {/* <li className="flex items-start">
                           <Trophy className="text-primary mr-3 mt-1" size={16} />
                           <span>Graduate Research Assistant ‒ AI & Data Analytics Lab</span>
                         </li>
                         <li className="flex items-start">
                           <Award className="text-primary mr-3 mt-1" size={16} />
                           <span>Dean's List ‒ All Semesters</span>
-                        </li>
+                        </li> */}
                         <li className="flex items-start">
                           <Star className="text-primary mr-3 mt-1" size={16} />
-                          <span>Outstanding Graduate Project Award (Predictive Analytics)</span>
+                          <span>Outstanding GPA of 3.56(out of 4)</span>
                         </li>
                       </ul>
                     </div>

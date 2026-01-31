@@ -3,27 +3,30 @@ import { Star } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Customer Churn Prediction",
-    description: "ML model predicting customer churn with 94% accuracy using ensemble methods",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    rating: 4.9,
-    tech: "Python, Scikit-learn, Pandas"
-  },
-  {
-    id: 2,
-    title: "Sales Forecasting Dashboard",
-    description: "Interactive dashboard for real-time sales prediction and trend analysis",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    title: "RAG Assistant with Knowledge Base",
+    description: "AI-powered chatbot using retrieval-augmented generation to answer questions from uploaded documents with context-aware responses",
+    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.8,
-    tech: "R, Shiny, Time Series"
+    tech: "React, Vercel, RAG, NLP",
+    liveLink: "https://ragbot-ashy.vercel.app"
+  },
+   {
+    id: 2,
+    title: "Food Ordering Application",
+    description: "Full-featured restaurant app with user authentication, interactive menu, shopping cart with tax calculation, and item favorites with modern React UI design",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    rating: 4.8,
+    tech: "React.js, State Management, UI/UX",
+    liveLink: "https://foodi-res-app.vercel.app/"
   },
   {
     id: 3,
     title: "Image Classification System",
     description: "Deep learning model for automated image classification with 96% accuracy",
-    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.7,
-    tech: "TensorFlow, CNN, Python"
+    tech: "TensorFlow, CNN, Python",
+    liveLink: "https://github.com/Rossie2141/Skin-Disease"
   },
   {
     id: 4,
@@ -31,7 +34,8 @@ const projects = [
     description: "NLP solution analyzing social media sentiment for market prediction",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.8,
-    tech: "PyTorch, NLTK, Twitter API"
+    tech: "PyTorch, NLTK, Twitter API",
+    // liveLink: "https://example.com/sentiment-analysis"
   },
   {
     id: 5,
@@ -39,7 +43,8 @@ const projects = [
     description: "Optimization algorithm reducing logistics costs by 23% using linear programming",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.9,
-    tech: "Python, OR-Tools, Optimization"
+    tech: "Python, OR-Tools, Optimization",
+    // liveLink: "https://example.com/supply-chain"
   },
   {
     id: 6,
@@ -47,7 +52,8 @@ const projects = [
     description: "Predictive model for patient readmission risk with clinical decision support",
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.8,
-    tech: "R, Random Forest, Healthcare"
+    tech: "R, Random Forest, Healthcare",
+    // liveLink: "https://example.com/healthcare-analysis"
   },
   {
     id: 7,
@@ -55,7 +61,8 @@ const projects = [
     description: "ML model for credit risk assessment and loan default prediction",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.7,
-    tech: "Python, XGBoost, Finance"
+    tech: "Python, XGBoost, Finance",
+    // liveLink: "https://example.com/risk-assessment"
   },
   {
     id: 8,
@@ -63,11 +70,16 @@ const projects = [
     description: "Streaming data pipeline processing 1M+ events per second",
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.9,
-    tech: "Apache Kafka, Spark, Python"
+    tech: "Apache Kafka, Spark, Python",
+    // liveLink: "https://example.com/analytics-platform"
   }
 ];
 
 export default function ProjectsSection() {
+  const handleCardClick = (liveLink) => {
+    window.open(liveLink, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="projects" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,8 +93,9 @@ export default function ProjectsSection() {
             {projects.map((project) => (
               <div 
                 key={project.id} 
-                className="bg-card rounded-lg overflow-hidden card-hover cursor-pointer netflix-shadow w-72 flex-shrink-0"
+                className="bg-card rounded-lg overflow-hidden card-hover cursor-pointer netflix-shadow w-72 flex-shrink-0 transition-transform hover:scale-105"
                 data-testid={`project-card-${project.id}`}
+                onClick={() => handleCardClick(project.liveLink)}
               >
                 <img 
                   src={project.image}
