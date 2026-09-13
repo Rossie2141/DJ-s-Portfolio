@@ -3,15 +3,24 @@ import { Star } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "RAG Assistant with Knowledge Base",
+    title: "RAG Assisted Resume Parser",
     description: "AI-powered chatbot using retrieval-augmented generation to answer questions from uploaded documents with context-aware responses",
-    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    image: "https://res.cloudinary.com/jerrick/image/upload/c_scale,f_jpg,q_auto/680f46b1ae6b31001d4369f3.png",
     rating: 4.8,
-    tech: "React, Vercel, RAG, NLP",
-    liveLink: "https://ragbot-ashy.vercel.app"
+    tech: "Python, RAG, PyTorch, Streamlit",
+    liveLink: "https://github.com/Rossie2141/AI-Resume-Parser"
   },
-   {
+  {
     id: 2,
+    title: "Interactive Coding Platform",
+    description: "Modern developer coding platform featuring in-browser Monaco code editor, problem solving challenges, and backend execution engine",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    rating: 4.9,
+    tech: "React.js, FastAPI, Monaco Editor",
+    liveLink: "https://dand-d-frontend.vercel.app/"
+  },
+  {
+    id: 3,
     title: "Food Ordering Application",
     description: "Full-featured restaurant app with user authentication, interactive menu, shopping cart with tax calculation, and item favorites with modern React UI design",
     image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
@@ -20,22 +29,13 @@ const projects = [
     liveLink: "https://foodi-res-app.vercel.app/"
   },
   {
-    id: 3,
-    title: "Image Classification System",
-    description: "Deep learning model for automated image classification with 96% accuracy",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-    rating: 4.7,
-    tech: "TensorFlow, CNN, Python",
-    liveLink: "https://github.com/Rossie2141/Skin-Disease"
-  },
-  {
     id: 4,
-    title: "Market Sentiment Analysis",
-    description: "NLP solution analyzing social media sentiment for market prediction",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    title: "RAG Assistant with Knowledge Base",
+    description: "AI-powered chatbot using retrieval-augmented generation to answer questions from uploaded documents with context-aware responses",
+    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     rating: 4.8,
-    tech: "PyTorch, NLTK, Twitter API",
-    // liveLink: "https://example.com/sentiment-analysis"
+    tech: "React, Vercel, RAG, NLP",
+    liveLink: "https://ragbot-ashy.vercel.app"
   },
   {
     id: 5,
@@ -76,8 +76,10 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
-  const handleCardClick = (liveLink) => {
-    window.open(liveLink, '_blank', 'noopener,noreferrer');
+  const handleCardClick = (liveLink?: string) => {
+    if (liveLink) {
+      window.open(liveLink, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -87,17 +89,17 @@ export default function ProjectsSection() {
         <p className="text-muted-foreground text-lg mb-12" data-testid="projects-description">
           Explore my most impactful data science solutions and machine learning applications
         </p>
-        
+
         <div className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
           <div className="flex gap-6 w-max">
             {projects.map((project) => (
-              <div 
-                key={project.id} 
+              <div
+                key={project.id}
                 className="bg-card rounded-lg overflow-hidden card-hover cursor-pointer netflix-shadow w-72 flex-shrink-0 transition-transform hover:scale-105"
                 data-testid={`project-card-${project.id}`}
                 onClick={() => handleCardClick(project.liveLink)}
               >
-                <img 
+                <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover"
